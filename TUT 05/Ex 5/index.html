@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+        }
+
+        .group:after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        body {
+            background: #cccccc;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.Sem;
+            font-size: 14px;
+        }
+
+        a {
+            color: #f58220;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: #d7721c;
+
+        }
+
+        #main-wrapper {
+            width: 960px;
+            margin: 0 auto;
+
+        }
+
+        header {
+            background: #333333;
+            padding: 30px 0 0 0;
+
+        }
+
+        .logo a {
+            display: block;
+            margin: 0 0 25px 20px;
+        }
+
+        .primary a {
+            background: #666666;
+            float: left;
+            border-right: 1px solid #333333;
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .primary a:hover {
+            background: #777777;
+        }
+
+        .content-wrap {
+            background: #e5e5e5;
+        }
+
+        #main-content {
+            background: #ffffff;
+            float: left;
+            width: 660px;
+            padding: 40px 20px;
+        }
+
+        .thumbnail {
+            float: left;
+            margin-right: 20px;
+
+        }
+
+        .posts {
+            clear: both;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #bbbbbb;
+
+        }
+
+        .posts div {
+            overflow: hidden;
+        }
+
+        post h1 a {
+            font-size: 24px;
+            color: #333333;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .post h1 a:hover {
+            color: #f58220;
+        }
+
+        .posts p {
+            padding: 10px 0 20px 0;
+
+        }
+
+        .posts.more {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        aside {
+            width: 300px;
+            background: #e5e5e5;
+            float: right;
+            padding: 40px 20px;
+
+        }
+
+        .side-box {
+            margin-bottom: 40px;
+        }
+
+        .size-box a {
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-heading {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+            border-bottom: 1px solid #bbbbbb;
+
+        }
+
+        .side {
+            line-height: 30px;
+        }
+
+        footer {
+            clear: both;
+            background: #333333;
+            height: 50px;
+            text-align: center;
+        }
+
+        footer small {
+            color: #cccccc;
+            font-size: 12px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <header>
+            <h1 class="logo"><img src="images/logo.png" title="HTML5"></a></h1>
+
+            <nav class="primary">
+                <div class="group">
+                    <a>Link 1</a>
+                    <a>Link 2</a>
+                    <a>Link 3</a>
+                    <a>Link 4</a>
+                    <a>Link 5</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content-wrap group">
+            <section id="main-content">
+                <article class="posts group">
+                    <img class="thumbnail" src="images/cover.jpg" alt="thumbnail" />
+                    <div>
+                        <h1><a href="#" title=""> This is a Lorem Ipsum Heading</a> </h1>
+                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti
+                            sociosqu ad litora torquent per conubia mostra, per inceptos himenaeos.
+                            Mauris in erat justo.</p>
+                        <a class="more" href="#" title="readmore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="posts group">
+                    <img class="thumbnail" src="images/cover.jpg" alt="thumbnail" />
+                    <div>
+                        <h1><a href="#" title=""> This is a Lorem Ipsum Heading</a> </h1>
+                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti
+                            sociosqu ad litora torquent per conubia mostra, per inceptos himenaeos.
+                            Mauris in erat justo.</p>
+                        <a class="more" href="#" title="readmore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="posts group">
+                    <img class="thumbnail" src="images/cover.jpg" alt="thumbnail" />
+                    <div>
+                        <h1><a href="#" title=""> This is a Lorem Ipsum Heading</a> </h1>
+                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti
+                            sociosqu ad litora torquent per conubia mostra, per inceptos himenaeos.
+                            Mauris in erat justo.</p>
+                        <a class="more" href="#" title="readmore">Read More</a>
+                    </div>
+                </article>
+            </section>
+
+            <aside>
+                <div class="side-box">
+                    <h2 class="sidebar-heading">Sidebar Links</h2>
+                    <div class="side">
+                        <a>Link 1</a></br>
+                        <a>Link 2</a></br>
+                        <a>Link 3</a></br>
+                        <a>Link 4</a>
+                    </div>
+                </div>
+
+                <div class="side-box">
+                    <h2 class="side-box-heading">Text Widget</h2>
+                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin,lorem quis bibendum auctor,nisi elit consequat ipsum, nec sagittis dem nibh id
+                        elit.</p>
+                    <br /><br />
+                    Duis sed olio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <footer>
+            <small>Copyright <a href="#" title="YourSite">YourSite</a>. All rights reserved</small>
+        </footer>
+    </div>
+</body>
+
+</html>
