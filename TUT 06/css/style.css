@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "cagliostroregular";
+    src: url(fonts/Cagliostro-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "capsuularegular";
+    src: url(fonts/Capsuula.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 {
+    font-family: "cagliostroregular";
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "cagliostroregular";
+    font-size: 2rem;
+}
+
+h2+p {
+    text-indent: 20px;
+}
+
+p,
+a,
+ul,
+ol,
+li {
+    font-family: "capsuularegular";
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+a[href*="http"] {
+    background: url(images/external-link-52.png) no-repeat 100% 0;
+    background-size: 18px 18px;
+    padding-right: 20px;
+}
+
+a:link {
+    color: #a66;
+}
+
+a {
+    text-decoration: underline;
+    outline: none;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    outline: none;
+    text-decoration: none;
+    border: 2px solid #a66;
+    padding: 2px;
+    display: block;
+    width: 80%;
+    padding: 20%, 15%;
+    text-align: center;
+    margin-bottom: 10%;
+    line-height: 2;
+}
