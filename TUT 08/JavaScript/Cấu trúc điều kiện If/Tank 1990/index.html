@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tank</title>
+
+</head>
+
+<body>
+
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+
+        <div style="top: 19px; left: 38px;width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;"
+            id="tank">
+
+        </div>
+
+        <div style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+            id="tank">
+
+        </div>
+
+    </div>
+
+    <table>
+
+        <tr>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveUp()">⬆</button>
+
+            </td>
+
+            <td></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                <button onclick="moveLeft()">⬅</button>
+            </td>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveRight()">➡</button>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveDown()">⬇</button>
+            </td>
+
+            <td></td>
+
+        </tr>
+
+    </table>
+<script>
+        let gameContext = document.getElementById("game").getContext("2d");
+        let rectX = 400, rectY = 500;
+        let positionX = rectX, positionY = rectY;
+        let speed = 80;
+        let step = 40;
+        let play;
+        let canvasHeight = 600;
+        let canvasWidth = 800;
+        let rectWidth = 20;
+        let rectHeight = 20;
+
+        drawRect();
+
+        function start() {
+            drawRect();
+            play = setInterval(moveLoop, speed);
+        }
+
+        function moveLoop() {
+            // Xoá hình chữ nhật đã vẽ trước đó 
+            gameContext.clearRect(rectX, rectY, rectWidth, rectHeight);
+            let isTop = rectY < 0;
+            let isBottom = rectY + rectHeight > canvasHeight;
+            let isRight = rectX + rectWidth > canvasWidth;
+            let isLeft = rectX < 0;
+            if (isTop || isBottom) {
+                step = -step;
+            }
+            // rectX += step;
+            rectY -= step;
+
+            drawRect();
+        }
+
+
+
+        function drawRect() {
+            gameContext.beginPath();
+            gameContext.fillStyle = '#fa4b2a';
+            gameContext.fillRect(rectX, rectY, rectWidth, rectHeight);
+        }
+
+        function moveUp() {
+            // Xoá hình chữ nhật đã vẽ trước đó 
+            gameContext.clearRect(rectX, rectY, rectWidth, rectHeight);
+            if (rectY > 0) {
+                rectY -= speed;
+            }
+            drawRect();
+        }
+        function moveDown() {
+            // Xoá hình chữ nhật đã vẽ trước đó 
+            gameContext.clearRect(rectX, rectY, rectWidth, rectHeight);
+            if (rectY + 100 < 600) {
+                rectY += speed;
+            }
+            drawRect();
+        }
+        function moveRight() {
+            // Xoá hình chữ nhật đã vẽ trước đó 
+            gameContext.clearRect(rectX, rectY, rectWidth, rectHeight);
+            if (rectX + 150 < 800) {
+                rectX += speed;
+            }
+            drawRect();
+        }
+        function moveLeft() {
+            // Xoá hình chữ nhật đã vẽ trước đó 
+            gameContext.clearRect(rectX, rectY, rectWidth, rectHeight);
+            if (rectX > 0) {
+                rectX -= speed;
+            }
+            drawRect();
+        }
+    </script>
+</body>
+
+</html>
