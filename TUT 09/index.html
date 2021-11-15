@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tank</title>
+
+</head>
+
+<body>
+
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+
+        <div style="top: 19px; left: 38px;width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;"
+            id="tank">
+
+        </div>
+
+        <div style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+            id="tank">
+
+        </div>
+
+    </div>
+
+    <table>
+
+        <tr>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveUp()">⬆</button>
+
+            </td>
+
+            <td></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                <button onclick="moveLeft()">⬅</button>
+            </td>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveRight()">➡</button>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td></td>
+
+            <td>
+
+                <button onclick="moveDown()">⬇</button>
+            </td>
+
+            <td></td>
+
+        </tr>
+
+    </table>
+
+    <script>
+        let field = document.getElementById("field");
+        let tank = document.getElementById("tank");
+        let step = 50;
+
+        function init() {
+            tank = document.getElementById('tank');
+            tank.style.position = 'relative';
+            tank.style.left = '350px';
+            tank.style.top = '300px';
+        }
+
+        function moveUp() {
+            if (parseInt(tank.style.top) <= 50) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+                tank.style.top = parseInt(tank.style.top) - step + 'px';
+            }
+        }
+
+        function moveDown() {
+            if (parseInt(tank.style.top) >= 600) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+                tank.style.top = parseInt(tank.style.top) + step + 'px';
+            }
+        }
+
+        function moveRight() {
+            if (parseInt(tank.style.left) >= 750) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+                tank.style.left = parseInt(tank.style.left) + step + 'px';
+            }
+        }
+
+        function moveLeft() {
+            if (parseInt(tank.style.left) <= 0) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+                tank.style.left = parseInt(tank.style.left) - step + 'px';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
